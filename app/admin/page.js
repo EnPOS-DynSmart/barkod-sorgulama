@@ -147,10 +147,6 @@ export default function AdminPage() {
                 </a>
               </div>
             </form>
-
-            <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
-       
-            </div>
           </div>
         </div>
       </div>

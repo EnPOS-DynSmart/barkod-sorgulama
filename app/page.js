@@ -41,6 +41,23 @@ export default function Home() {
     setError('')
   }
 
+  // Gramaj formatını düzelt: "01.004" -> "1.004 kg" veya "1004 gr"
+  const formatGramaj = (gramajStr) => {
+    if (!gramajStr) return ''
+    
+    // "01.004" gibi string'i float'a çevir
+    const gramajKg = parseFloat(gramajStr)
+    
+    // 1 kg'dan küçükse gram olarak göster
+    if (gramajKg < 1) {
+      const gramajGr = Math.round(gramajKg * 1000)
+      return `${gramajGr} gr`
+    } else {
+      // 1 kg ve üzeriyse kg olarak göster
+      return `${gramajKg.toFixed(3)} kg`
+    }
+  }
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
@@ -129,9 +146,9 @@ export default function Home() {
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Barkod</p>
                 <p className="text-lg font-mono font-semibold text-gray-800 dark:text-white mb-4">{result.barkod}</p>
                 
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Brüt Gramaj</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Brüt Ağırlık</p>
                 <p className="text-4xl font-bold text-green-600 dark:text-green-400">
-                  {result.gramaj} <span className="text-2xl">gr</span>
+                  {formatGramaj(result.gramaj)}
                 </p>
               </div>
             </div>

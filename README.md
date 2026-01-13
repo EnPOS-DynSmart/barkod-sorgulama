@@ -1,15 +1,18 @@
 # Barkod Sorgulama Sistemi
 
-Barkod numarası ile brüt gramaj bilgisini sorgulayabileceğiniz basit bir web uygulaması.
+Barkod numarası ile brüt ağırlık bilgisini sorgulayabileceğiniz modern bir web uygulaması.
 
 ## 🚀 Özellikler
 
 - ✨ Modern ve kullanıcı dostu arayüz
 - 🔍 Hızlı barkod sorgulama
-- 📊 4,293 barkod kaydı
+- 📊 6,465 barkod kaydı
+- ⚖️ Akıllı ağırlık formatlaması (gram/kg otomatik)
+- 🔐 Şifre korumalı admin panel
+- 📥 Excel import/export
 - 🌙 Dark mode desteği
 - 📱 Responsive tasarım
-- ⚡ Next.js 14 ile optimize edilmiş performans
+- ⚡ Next.js 15 ile optimize edilmiş performans
 
 ## 🛠️ Kurulum
 
@@ -51,9 +54,30 @@ vercel
 
 1. Ana sayfada barkod numarasını girin
 2. "Sorgula" butonuna tıklayın
-3. Sonuç ekranda görünecektir
+3. Ağırlık bilgisi otomatik olarak gram veya kg cinsinden görünecektir
 
-Örnek barkod: `8690635060375`
+### Örnek Barkodlar
+
+- `8690635060375` → 992 gr
+- `3574661731902` → 280 gr
+- `793550` → 280 gr
+
+## 🔐 Admin Panel
+
+Admin paneline `/admin` sayfasından erişebilirsiniz.
+
+**Varsayılan Şifre:** `admin123`
+
+Admin panelinde:
+- Excel dosyasından toplu barkod import
+- Mevcut barkodları Excel'e export
+- Barkod istatistikleri
+
+## 📊 Ağırlık Formatlaması
+
+Sistem otomatik olarak ağırlığı en uygun formatta gösterir:
+- **1 kg'dan küçük**: Gram cinsinden (örn: 280 gr, 992 gr)
+- **1 kg ve üzeri**: Kilogram cinsinden (örn: 1.004 kg, 2.500 kg)
 
 ## 🗂️ Proje Yapısı
 
@@ -61,13 +85,16 @@ vercel
 barkod-sorgulama/
 ├── app/
 │   ├── api/
-│   │   └── barkod/
-│   │       └── route.js       # API endpoint
+│   │   ├── barkod/
+│   │   │   └── route.js       # Barkod sorgulama API
+│   │   └── admin/             # Admin API'leri
+│   ├── admin/
+│   │   └── page.js            # Admin panel
 │   ├── globals.css            # Global stiller
 │   ├── layout.js              # Root layout
 │   └── page.js                # Ana sayfa
 ├── data/
-│   └── barkodlar.json         # Barkod veritabanı (4,293 kayıt)
+│   └── barkodlar.json         # Barkod veritabanı (6,465 kayıt)
 ├── next.config.js
 ├── package.json
 ├── tailwind.config.js
@@ -76,7 +103,7 @@ barkod-sorgulama/
 
 ## 🎨 Teknolojiler
 
-- **Next.js 14** - React framework
+- **Next.js 15** - React framework
 - **Tailwind CSS** - Styling
 - **Vercel** - Deployment platform
 

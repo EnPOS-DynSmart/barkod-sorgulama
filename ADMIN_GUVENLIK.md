@@ -10,6 +10,11 @@ Admin panel artık **şifre ile korumalı**!
 
 ### Local Development (Test)
 
+<<<<<<< HEAD
+=======
+**Varsayılan Şifre:** `admin123`
+
+>>>>>>> 7cdc2d873ff981bd62d44b1b238930719f472dac
 Değiştirmek için:
 
 1. `.env.local` dosyasını aç
@@ -81,7 +86,11 @@ vercel --prod
 ### 1. Local Test
 ```
 URL: http://localhost:3000/admin
+<<<<<<< HEAD
 Şifre: .env.local dosyasında belirtilen şifre
+=======
+Şifre: admin123
+>>>>>>> 7cdc2d873ff981bd62d44b1b238930719f472dac
 ```
 
 ### 2. Yanlış Şifre Testi
@@ -137,6 +146,10 @@ https://your-app.vercel.app/admin
 - `admin` (çok basit)
 - `123456` (tahmin edilebilir)
 - `password` (yaygın)
+<<<<<<< HEAD
+=======
+- `admin123` (varsayılan)
+>>>>>>> 7cdc2d873ff981bd62d44b1b238930719f472dac
 
 ### 📋 Şifre Kriterleri:
 - En az 8 karakter
@@ -192,8 +205,13 @@ https://your-app.vercel.app/admin
 ## 🎯 Özet
 
 ✅ Admin panel şifre ile korumalı  
+<<<<<<< HEAD
 ✅ Local test: .env.local'de ayarla  
 ✅ Production: Güçlü şifre kullan!  
+=======
+✅ Local test: `admin123`  
+✅ Production: Mutlaka değiştir!  
+>>>>>>> 7cdc2d873ff981bd62d44b1b238930719f472dac
 ✅ `.env.local` dosyasından yönetiliyor  
 ✅ Vercel'de environment variable olarak ekle  
 

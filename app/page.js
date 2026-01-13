@@ -140,7 +140,11 @@ export default function Home() {
 
         <div className="text-center mt-6 space-y-2">
           <p className="text-sm text-gray-600 dark:text-gray-400">
+<<<<<<< HEAD
             Toplam <span className="font-semibold">6,465</span> barkod kayıtlı
+=======
+            Toplam <span className="font-semibold">4,293</span> barkod kayıtlı
+>>>>>>> 7cdc2d873ff981bd62d44b1b238930719f472dac
           </p>
           <a
             href="/admin"

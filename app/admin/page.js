@@ -147,6 +147,17 @@ export default function AdminPage() {
                 </a>
               </div>
             </form>
+<<<<<<< HEAD
+=======
+
+            <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+              <p className="text-xs text-gray-600 dark:text-gray-400">
+                💡 <strong>Local Test:</strong> Varsayılan şifre: <code className="bg-gray-200 dark:bg-gray-700 px-1 rounded">admin123</code>
+                <br />
+                🔒 Production'da .env.local dosyasından değiştirin!
+              </p>
+            </div>
+>>>>>>> 7cdc2d873ff981bd62d44b1b238930719f472dac
           </div>
         </div>
       </div>

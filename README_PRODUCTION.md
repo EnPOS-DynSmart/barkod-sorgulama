@@ -41,7 +41,11 @@ vercel
 # 5. Admin şifresini ayarla
 vercel env add ADMIN_PASSWORD
 
+<<<<<<< HEAD
 # Güçlü bir şifre belirle
+=======
+# Şifreyi gir (örn: GuvenliSifre2024!)
+>>>>>>> 7cdc2d873ff981bd62d44b1b238930719f472dac
 # Environment seç: Production
 
 # 6. Production deploy

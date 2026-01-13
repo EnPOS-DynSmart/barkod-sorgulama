@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 
@@ -11,7 +11,7 @@ export default function Home() {
   const handleSearch = async (e) => {
     e.preventDefault()
     if (!barkod.trim()) {
-      setError('Lütfen bir barkod giriniz')
+      setError('LÃ¼tfen bir barkod giriniz')
       return
     }
 
@@ -26,10 +26,10 @@ export default function Home() {
       if (data.success) {
         setResult(data)
       } else {
-        setError(data.message || 'Barkod bulunamadı')
+        setError(data.message || 'Barkod bulunamadÄ±')
       }
     } catch (err) {
-      setError('Bir hata oluştu. Lütfen tekrar deneyin.')
+      setError('Bir hata oluÅŸtu. LÃ¼tfen tekrar deneyin.')
     } finally {
       setLoading(false)
     }
@@ -55,21 +55,21 @@ export default function Home() {
               Barkod Sorgulama
             </h1>
             <p className="text-gray-600 dark:text-gray-400">
-              Barkod numarasını girerek brüt gramaj bilgisini öğrenin
+              Barkod numarasÄ±nÄ± girerek brÃ¼t gramaj bilgisini Ã¶ÄŸrenin
             </p>
           </div>
 
           <form onSubmit={handleSearch} className="space-y-4">
             <div>
               <label htmlFor="barkod" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Barkod Numarası
+                Barkod NumarasÄ±
               </label>
               <input
                 type="text"
                 id="barkod"
                 value={barkod}
                 onChange={(e) => setBarkod(e.target.value)}
-                placeholder="Örn: 8690635060375"
+                placeholder="Ã–rn: 8690635060375"
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-all"
                 disabled={loading}
                 autoFocus
@@ -88,7 +88,7 @@ export default function Home() {
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    Sorgulanıyor...
+                    SorgulanÄ±yor...
                   </>
                 ) : (
                   'Sorgula'
@@ -129,7 +129,7 @@ export default function Home() {
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Barkod</p>
                 <p className="text-lg font-mono font-semibold text-gray-800 dark:text-white mb-4">{result.barkod}</p>
                 
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Brüt Gramaj</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">BrÃ¼t Gramaj</p>
                 <p className="text-4xl font-bold text-green-600 dark:text-green-400">
                   {result.gramaj} <span className="text-2xl">gr</span>
                 </p>
@@ -140,7 +140,7 @@ export default function Home() {
 
         <div className="text-center mt-6 space-y-2">
           <p className="text-sm text-gray-600 dark:text-gray-400">
-            Toplam <span className="font-semibold">4,293</span> barkod kayıtlı
+            Toplam <span className="font-semibold">4,293</span> barkod kayÄ±tlÄ±
           </p>
           <a
             href="/admin"
@@ -157,3 +157,4 @@ export default function Home() {
     </main>
   )
 }
+
